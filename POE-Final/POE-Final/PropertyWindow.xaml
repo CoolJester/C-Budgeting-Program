@@ -1,0 +1,55 @@
+﻿<Window x:Class="POE_Final.PropertyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POE_Final"
+        mc:Ignorable="d"
+        Title="Property" Height="714.647" Width="801.495" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="331" Margin="10,10,0,0" VerticalAlignment="Top" Width="775" Source="house-icon.png" Stretch="Fill"/>
+        <Rectangle Fill="#FF46B248" HorizontalAlignment="Left" Height="131" Margin="0,346,0,0" Stroke="Black" VerticalAlignment="Top" Width="795"/>
+        <Label Content="Please Choose an Option Below for Property" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Width="775" FontWeight="Bold" FontSize="16"/>
+        <Image HorizontalAlignment="Left" Height="84" Margin="26,388,0,0" VerticalAlignment="Top" Width="96" Source="rent icon.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="84" Margin="418,388,0,0" VerticalAlignment="Top" Width="96" Source="buy icon.jpg" Stretch="Fill"/>
+        <Button x:Name="btnRent" Content="CLICK TO RENT" HorizontalAlignment="Left" Margin="122,388,0,0" VerticalAlignment="Top" Width="282" Height="84" FontSize="24" Cursor="Hand" Click="BtnRent_Click" BorderBrush="#FF46B248">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF46B248" Offset="0"/>
+                    <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" Offset="1"/>
+                    <GradientStop Color="#FF46B248" Offset="0.349"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBuy" Content="CLICK TO BUY" HorizontalAlignment="Left" Margin="514,388,0,0" VerticalAlignment="Top" Width="271" Height="84" FontSize="24" BorderBrush="#FF46B248" Cursor="Hand" Click="BtnBuy_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF46B248" Offset="0"/>
+                    <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" Offset="1"/>
+                    <GradientStop Color="#FF46B248" Offset="0.324"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <StackPanel HorizontalAlignment="Left" Height="137" Margin="26,482,0,0" VerticalAlignment="Top" Width="263" Background="#FF46B248">
+            <Label x:Name="lblRentAmount" Content="Enter the amount for RENT" FontSize="16" Visibility="Hidden"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="137" Margin="294,482,0,0" VerticalAlignment="Top" Width="110">
+            <TextBox x:Name="txtRentalAmount" Height="33" TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Left" Width="110" Visibility="Hidden" TextChanged="TxtRentalAmount_TextChanged"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="137" Margin="418,482,0,0" VerticalAlignment="Top" Width="252" Background="#FF46B248">
+            <Label x:Name="lblPropertyPriceAmount" Content="Price of Property" FontSize="16" Visibility="Hidden"/>
+            <Label x:Name="lblPropertyDepositAmount" Content="Deposit amount" FontSize="16" Visibility="Hidden"/>
+            <Label x:Name="lblPropertyInterestRate" Content="Interest Rate of Property" FontSize="16" Visibility="Hidden"/>
+            <Label x:Name="lblPropertyNumberOfMonths" Content="Months to Pay (240-360)" FontSize="16" Visibility="Hidden"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="137" Margin="675,482,0,0" VerticalAlignment="Top" Width="110">
+            <TextBox x:Name="txtPropertyPriceAmount" Height="23" TextWrapping="Wrap" Margin="0,7,0,0" FontSize="16" Visibility="Hidden" TextChanged="TxtPropertyPriceAmount_TextChanged"/>
+            <TextBox x:Name="txtPropertyDepositAmount" Height="23" TextWrapping="Wrap" Margin="0,7,0,0" FontSize="16" Visibility="Hidden" TextChanged="TxtPropertyDepositAmount_TextChanged"/>
+            <TextBox x:Name="txtPropertyInterestRate" Height="23" TextWrapping="Wrap" Margin="0,7,0,0" FontSize="16" Visibility="Hidden" TextChanged="TxtPropertyInterestRate_TextChanged"/>
+            <TextBox x:Name="txtPropertyNumberOfMonths" Height="23" TextWrapping="Wrap" Margin="0,7,0,0" FontSize="16" Visibility="Hidden" TextChanged="TxtPropertyNumberOfMonths_TextChanged"/>
+        </StackPanel>
+        <Button Content="CONTINUE" HorizontalAlignment="Left" Margin="294,624,0,0" VerticalAlignment="Top" Width="234" Height="50" FontSize="16" FontWeight="Bold" Click="Button_Click"/>
+        <Label x:Name="lblErrorLabel" Content="INVALID INPUT!!!" HorizontalAlignment="Left" Margin="26,629,0,0" VerticalAlignment="Top" Width="263" Height="44" FontSize="24" FontWeight="Bold" Foreground="Red" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

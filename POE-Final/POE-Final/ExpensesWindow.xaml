@@ -1,0 +1,45 @@
+﻿<Window x:Class="POE_Final.ExpensesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POE_Final"
+        mc:Ignorable="d"
+        Title="Expenses" Height="471.776" Width="672.923" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Basic Expenses" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Height="48" Width="336" FontSize="24" FontWeight="Bold" Background="#FFC3E292"/>
+        <GroupBox Header="TAX" HorizontalAlignment="Left" Height="100" Margin="351,10,0,0" VerticalAlignment="Top" Width="304" FontWeight="Bold">
+            <StackPanel HorizontalAlignment="Left" Height="65" Margin="0,10,-2,0" VerticalAlignment="Top" Width="294">
+                <Label Content="Your Monthly Tax is : " Margin="0,0,143,0"/>
+                <Label x:Name="lblTax" Content="R --.--" Margin="150,0,0,0" FontWeight="Normal"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="EXPENSES" HorizontalAlignment="Left" Height="284" Margin="351,115,0,0" VerticalAlignment="Top" Width="304" FontWeight="Bold">
+            <StackPanel HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="294" Margin="0,0,-2,0">
+                <Label Content="Groceries"/>
+                <Label x:Name="lblGroceries" Content="R --,--" Margin="150,0,0,0" FontWeight="Normal"/>
+                <Label Content="Water and Lights"/>
+                <Label x:Name="lblWaterAndElectricity" Content="R --,--" Margin="150,0,0,0" FontWeight="Normal"/>
+                <Label Content="Transport including Fuel"/>
+                <Label x:Name="lblTransport" Content="R --,--" Margin="150,0,0,0" FontWeight="Normal"/>
+                <Label Content="Cell/Telephone Costs"/>
+                <Label x:Name="lblCellphone" Content="R --,--" Margin="150,0,0,0" FontWeight="Normal"/>
+                <Label Content="Other Expenses"/>
+                <Label x:Name="lblOtherExpenses" Content="R --,--" Margin="150,0,0,0" FontWeight="Normal"/>
+            </StackPanel>
+        </GroupBox>
+        <Label Content="Enter your Groceries Cost" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="157"/>
+        <Image HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="346" Source="icon-cute.jpg" Stretch="Fill"/>
+        <TextBox x:Name="txtGroceries" HorizontalAlignment="Left" Height="23" Margin="172,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" TextChanged="TxtGroceries_TextChanged"/>
+        <Label Content="Enter Water &amp; Lights Cost" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtWaterAndLights" HorizontalAlignment="Left" Height="23" Margin="172,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" TextChanged="TxtWaterAndLights_TextChanged"/>
+        <Label Content="Enter Cell/Telephone Cost" HorizontalAlignment="Left" Margin="10,311,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtCellphone" HorizontalAlignment="Left" Height="23" Margin="172,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" TextChanged="TxtCellphone_TextChanged"/>
+        <Label Content="Other Expenses" HorizontalAlignment="Left" Margin="10,342,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtOtherExpenses" HorizontalAlignment="Left" Height="23" Margin="172,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" TextChanged="TxtOtherExpenses_TextChanged"/>
+        <Button x:Name="btnExpensesSubmit" Content="SUBMIT" HorizontalAlignment="Left" Margin="10,386,0,0" VerticalAlignment="Top" Width="336" Height="38" Background="#FFC3E28E" FontWeight="Bold" FontSize="18" Click="Button_Click"/>
+        <Label Content="Enter the Transport Cost" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtTransport" HorizontalAlignment="Left" Height="23" Margin="172,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" TextChanged="TxtTransport_TextChanged"/>
+
+    </Grid>
+</Window>

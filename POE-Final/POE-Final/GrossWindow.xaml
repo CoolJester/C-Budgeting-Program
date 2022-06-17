@@ -1,0 +1,28 @@
+﻿<Window x:Class="POE_Final.GrossWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POE_Final"
+        mc:Ignorable="d"
+        Title="Gross" Height="200.333" Width="644.518" ResizeMode="NoResize" Icon="icon-money.png" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="643*"/>
+            <ColumnDefinition Width="88*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Gross Income" HorizontalAlignment="Left" Margin="136,10,0,0" VerticalAlignment="Top" Height="54" Width="493" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="121" Margin="10,10,0,0" VerticalAlignment="Top" Width="121" Source="money-bag.jpg" Stretch="Fill"/>
+        <TextBox x:Name="txtGrossIncome" HorizontalAlignment="Left" Height="30" Margin="159,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" TextChanged="TxtGrossIncome_TextChanged"/>
+        <Label Content="Please enter your gross monthly income then press Continue to procced" HorizontalAlignment="Left" Margin="159,69,0,0" VerticalAlignment="Top" Height="28" Width="393"/>
+        <Button x:Name="btnGrossEnter" Content="ENTER" HorizontalAlignment="Center" Margin="164,130,10,0" VerticalAlignment="Top" Width="388" Height="33" FontWeight="Bold" FontSize="16" Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
